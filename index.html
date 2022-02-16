@@ -21,23 +21,44 @@
         <div class="row gx-5">
             <!-- Money Calculator Picture Section -->
             <div class="col-12 col-md-7">
-                <img class="img-fluid" src="images/money-calculator.webp" alt="">
+                <img class="img-fluid" src="images/money-calculator.jpg" alt="">
             </div>
             <!-- Income, Expenses & Balance Section -->
             <div class="col-12 col-md-5 bg-light">
                 <div>
+
                     <h4 class="text-center mt-5">Income</h4>
-                    <h6 class="text-center">Income: <span class="input-background"><input type="text"
-                                class="input-background" id="income"></span></h6>
+                    <div class="input-group flex-nowrap">
+                        <h5 class="text-center pe-2"> Income: </h5>
+                        <input type="text" id="income" class="form-control" placeholder="Enter positive value"
+                            aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                    <!-- <h6 class="text-center">Income: <span class="input-background"><input type="text"
+                                class="input-background" id="income"></span></h6> -->
                 </div>
                 <div>
                     <h4 class="text-center mt-3">Expenses</h4>
-                    <h6 class="text-center">Food: <span><input type="text" class="input-background" id="food"></span>
-                    </h6>
-                    <h6 class="text-center">Rent: <span><input class="input-background" type="text" id="rent"></span>
-                    </h6>
-                    <h6 class="text-center">Clothes: <span><input class="input-background" type="text"
-                                id="clothes"></span></h6>
+                    <div class="input-group flex-nowrap my-2">
+                        <h5 class="text-center pe-2"> Food: </h5>
+                        <input type="text" id="food" class="form-control" placeholder="Enter positive value"
+                            aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap my-2">
+                        <h5 class="text-center pe-2"> Rent: </h5>
+                        <input type="text" id="rent" class="form-control" placeholder="Enter positive value"
+                            aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                    <div class="input-group flex-nowrap my-2">
+                        <h5 class="text-center pe-2"> Clothes: </h5>
+                        <input type="text" id="clothes" class="form-control" placeholder="Username"
+                            aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
+                    <!-- <h6 class="text-center">Food: <span><input type="text" class="input-background" id="food"></span>
+                    </h6> -->
+                    <!-- <h6 class="text-center">Rent: <span><input class="input-background" type="text" id="rent"></span>
+                    </h6> -->
+                    <!-- <h6 class="text-center">Clothes: <span><input class="input-background" type="text"
+                                id="clothes"></span></h6> -->
                 </div>
                 <div class="text-center">
                     <button id="calculate-button" class="btn btn-primary mt-2">Calculate</button>
@@ -49,8 +70,16 @@
                     <h5>Balance:<span id="balance-total">00</span></h5>
                 </div>
                 <div class="text-center mt-3">
-                    <h6>Save: <span> <input type="text" class="input-background" id="saving-input"> </span> <span> %
-                        </span><button class="btn btn-primary" id="save-button">Save</button></h6>
+                    <div class="input-group flex-nowrap my-2 w-75">
+                        <h5 class="text-center pe-2"> Save:</h5>
+                        <input type="text" class="form-control" id="saving-input" placeholder="Enter positive value"
+                            aria-label="Username" aria-describedby="addon-wrapping"> <span
+                            class="mx-3 text-center fw-bold fs-3"> %
+                        </span> <button class="btn btn-primary" id="save-button">Save</button></h6>
+                    </div>
+
+                    <!-- <h6>Save: <span> <input type="text" class="input-background" id="saving-input"> </span> <span> %
+                        </span><button class="btn btn-primary" id="save-button">Save</button></h6> -->
                 </div>
                 <div class="text-center mt-3">
                     <h5>Saving Amount:<span id="saving-amount">00</span></h5>

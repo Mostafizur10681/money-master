@@ -17,7 +17,6 @@ document.getElementById('calculate-button').addEventListener('click', function (
 
     if (incomeInput < 0 || isNaN(incomeInput) || incomeInput == null) {
         alert('Please Enter a positive Intiger number')
-
     }
     else if (foodInput < 0 || isNaN(foodInput) || foodInput == null) {
         alert('Please Enter a Positive Intiger value of food')
@@ -46,7 +45,8 @@ document.getElementById('calculate-button').addEventListener('click', function (
 document.getElementById('save-button').addEventListener('click', function () {
 
     const incomeInput = getInputValue('income');
-    const savingInputValue = getInputValue('saving-input')
+    const savingInputValue = getInputValue('saving-input');
+
     if (incomeInput < 0 || isNaN(incomeInput) || incomeInput == null) {
         alert('Please Enter a positive Intiger number')
     }
@@ -61,6 +61,7 @@ document.getElementById('save-button').addEventListener('click', function () {
         const balance = document.getElementById('balance-total').innerText;
         const remainingAmount = balance - newSavingAmount;
         remaining.innerText = remainingAmount;
+
     }
 
 
