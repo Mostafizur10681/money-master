@@ -7,14 +7,16 @@ function getInputValue(inputId) {
 
 }
 
-
+// Add event handler in calculate button
 document.getElementById('calculate-button').addEventListener('click', function () {
 
+    // call the functions to get input value
     const incomeInput = getInputValue('income');
     const foodInput = getInputValue('food');
     const rentInput = getInputValue('rent');
     const clothesInput = getInputValue('clothes');
 
+    // Check error for inputBoxs
     if (incomeInput < 0 || isNaN(incomeInput) || incomeInput == null) {
         alert('Please Enter a positive Intiger number')
     }
@@ -29,24 +31,34 @@ document.getElementById('calculate-button').addEventListener('click', function (
     }
     else {
         const expenses = document.getElementById('expenses-total');
-        const expensesValue = expenses.innerText;
+        const expensesValue = parseFloat(expenses.innerText);
         const expensesTotal = foodInput + rentInput + clothesInput;
         expenses.innerText = expensesTotal;
         const balance = document.getElementById('balance-total');
         const balanceValue = balance.innerText;
-        const balanceTotal = incomeInput - expensesTotal;
-        balance.innerText = balanceTotal;
+
+
+        // add error meassage if incomeInput less then expensesTotal;
+        if (expensesTotal > incomeInput) {
+            alert('In sufficient balance');
+            balance.innerText = '00';
+        }
+        else {
+            const balanceTotal = incomeInput - expensesTotal;
+            balance.innerText = balanceTotal;
+        }
     }
 
+});
 
-
-})
-
+// Add event handling in save button
 document.getElementById('save-button').addEventListener('click', function () {
 
+    // call income & saving input value from getInputValue function
     const incomeInput = getInputValue('income');
     const savingInputValue = getInputValue('saving-input');
 
+    // check error for save input box
     if (incomeInput < 0 || isNaN(incomeInput) || incomeInput == null) {
         alert('Please Enter a positive Intiger number')
     }
@@ -59,10 +71,16 @@ document.getElementById('save-button').addEventListener('click', function () {
 
         const remaining = document.getElementById('remaining-balance');
         const balance = document.getElementById('balance-total').innerText;
-        const remainingAmount = balance - newSavingAmount;
-        remaining.innerText = remainingAmount;
 
+
+        // dispaly a error message if balance is less then newSavingAmount
+        if (newSavingAmount > balance) {
+            alert('In-sufficiant balance');
+            remaining.innerText = '00';
+        }
+        else {
+            const remainingAmount = balance - newSavingAmount;
+            remaining.innerText = remainingAmount;
+        }
     }
-
-
-})
+});
