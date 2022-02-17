@@ -72,7 +72,6 @@ document.getElementById('save-button').addEventListener('click', function () {
         const remaining = document.getElementById('remaining-balance');
         const balance = document.getElementById('balance-total').innerText;
 
-
         // dispaly a error message if balance is less then newSavingAmount
         if (newSavingAmount > balance) {
             alert('In-sufficiant balance');
